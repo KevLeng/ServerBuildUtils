@@ -4,7 +4,7 @@ echo "***********************************************************************"
 echo "Started installWetty.sh"
 echo "***********************************************************************"
 
-export WETTY_PORT=${WETTY_PORT:-"3001"}
+export WETTY_PORT=${WETTY_PORT:-"8080"}
 
 echo "Installing Wetty"
 #WETTY_FILE="https://raw.githubusercontent.com/Nodnarboen/keptn-in-a-box/master/setup-wetty.sh"
