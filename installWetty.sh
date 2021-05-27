@@ -4,6 +4,8 @@ echo "***********************************************************************"
 echo "Started installWetty.sh"
 echo "***********************************************************************"
 
+export WETTY_PORT=${WETTY_PORT:-"3001"}
+
 echo "Installing Wetty"
 #WETTY_FILE="https://raw.githubusercontent.com/Nodnarboen/keptn-in-a-box/master/setup-wetty.sh"
 #printInfo "Download wetty setup file..."
@@ -48,7 +50,7 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=/usr/local/bin
-ExecStart=/usr/local/bin/wetty -p 3000
+ExecStart=/usr/local/bin/wetty -p $WETTY_PORT
 TimeoutStopSec=20
 KillMode=mixed
 Restart=always
