@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script to install Microk8s on ubuntu
+# Script to install wetty on ubuntu
 echo "***********************************************************************"
 echo "Started installWetty.sh"
 echo "***********************************************************************"
