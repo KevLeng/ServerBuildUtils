@@ -48,7 +48,7 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=/usr/local/bin
-ExecStart=/usr/local/bin/wetty -p 80
+ExecStart=/usr/local/bin/wetty -p 3000
 TimeoutStopSec=20
 KillMode=mixed
 Restart=always
