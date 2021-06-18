@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script to install Helm on ubuntu
+# Script to install Docker on ubuntu
 echo "***********************************************************************"
 echo "Started installDocker.sh"
 echo "***********************************************************************"
