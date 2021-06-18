@@ -15,7 +15,7 @@ fi
 
 if [[ "$INSTALL_DOCKER_COMPOSE" == "true" ]]; then
     echo "Install Docker Compose"
-    apt install docker-compose
+    apt install docker-compose -y
 fi
 
 
