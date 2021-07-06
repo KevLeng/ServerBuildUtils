@@ -19,6 +19,8 @@ echo "Sockshop ingress deployed."
 
 cd ..
 
+chown -R $USER:$USER sockshop/
+
 echo "-----------------------------------------------------------------------"
 echo "Done installation of sockshop"
 echo "-----------------------------------------------------------------------"
