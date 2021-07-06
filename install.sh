@@ -24,7 +24,7 @@ APITOKEN=$APITOKEN
 # ==================================================
 # ----  Workshop Variables ---- 
 # ==================================================
-PUBLIC_SECTOR_WORKSHOP=${PUBLIC_SECTOR_WORKSHOP:-false}
+CLOUD_NATIVE_OBERV=${CLOUD_NATIVE_OBERV:-false}
 
 # ==================================================
 # ----  Environment Variables ---- 
@@ -173,7 +173,7 @@ install(){
 
 }
 
-if [[ "$PUBLIC_SECTOR_WORKSHOP" == true ]]; then
+if [[ "$CLOUD_NATIVE_OBERV" == true ]]; then
     echo "Installing for Public Sector Workshop..."
     export MICROK8S_CHANNEL="1.19/stable"
 
