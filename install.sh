@@ -148,13 +148,13 @@ install(){
     fi
 
     if [[ "$DOCKER_INSTALL" == true ]]; then
-        echo "Install Istio"
+        echo "Install Docker"
         getFunctionsFile $DOCKER_FUNCTIONS_FILE $DOCKER_FUNCTIONS_FILE_REPO
         source $DOCKER_FUNCTIONS_FILE
     fi
 
     if [[ "$WETTY_INSTALL" == true ]]; then
-        echo "Install Istio"
+        echo "Install Wetty"
         getFunctionsFile $WETTY_FUNCTIONS_FILE $WETTY_FUNCTIONS_FILE_REPO
         source $WETTY_FUNCTIONS_FILE
     fi
