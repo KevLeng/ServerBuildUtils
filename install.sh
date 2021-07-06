@@ -108,7 +108,7 @@ getFunctionsFile(){
     repo=$2
     
     if [ -f "$file" ]; then
-        echo "The functions file $file exists locally, loading functions from it. (dev)"
+        echo "The functions file $file exists locally, loading functions from it."
     else
         echo "The functions file $file does not exist, getting it from github."
         curl -o $file $repo
