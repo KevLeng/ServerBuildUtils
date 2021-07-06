@@ -3,10 +3,14 @@
 echo "-----------------------------------------------------------------------"
 echo "Install Sockshop"
 echo "-----------------------------------------------------------------------"
+export USER=${USER:-"ubuntu"}
+
+# Wrapper for runnig commands for the real owner and not as root
+alias bashas="sudo -H -u ${USER} bash -c"
 
 SOCKSHOP_REPO="https://github.com/KevLeng/sockshop"
 
-git clone $SOCKSHOP_REPO
+bashas "git clone $SOCKSHOP_REPO"
 cd sockshop
 
 ./deploy-sockshop.sh
