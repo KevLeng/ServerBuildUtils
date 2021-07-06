@@ -24,7 +24,9 @@ APITOKEN=$APITOKEN
 # ==================================================
 # ----  Workshop Variables ---- 
 # ==================================================
+echo "PUBLIC_SECTOR_WORKSHOP=$PUBLIC_SECTOR_WORKSHOP"
 PUBLIC_SECTOR_WORKSHOP=${PUBLIC_SECTOR_WORKSHOP:-false}
+echo "PUBLIC_SECTOR_WORKSHOP=$PUBLIC_SECTOR_WORKSHOP"
 
 # ==================================================
 # ----  Environment Variables ---- 
