@@ -121,48 +121,56 @@ install(){
         echo "Install Utils"
         getFunctionsFile $UTIL_FUNCTIONS_FILE $UTIL_FUNCTIONS_FILE_REPO
         source $UTIL_FUNCTIONS_FILE
+        rm $UTIL_FUNCTIONS_FILE
     fi
 
     if [[ "$K3S_INSTALL" == true ]]; then
         echo "Install K3S"
         getFunctionsFile $K3S_FUNCTIONS_FILE $K3S_FUNCTIONS_FILE_REPO
         source $K3S_FUNCTIONS_FILE
+        rm $K3S_FUNCTIONS_FILE
     fi
 
     if [[ "$MICROK8S_INSTALL" == true ]]; then
         echo "Install MicroK8S"
         getFunctionsFile $MICROK8S_FUNCTIONS_FILE $MICROK8S_FUNCTIONS_FILE_REPO
         source $MICROK8S_FUNCTIONS_FILE
+        rm $K3S_FUNCTIONS_FILE
     fi
 
     if [[ "$HELM_INSTALL" == true ]]; then
         echo "Install Helm"
         getFunctionsFile $HELM_FUNCTIONS_FILE $HELM_FUNCTIONS_FILE_REPO
         source $HELM_FUNCTIONS_FILE
+        rm $HELM_FUNCTIONS_FILE
     fi
 
     if [[ "$ISTIO_INSTALL" == true ]]; then
         echo "Install Istio"
         getFunctionsFile $ISTIO_FUNCTIONS_FILE $ISTIO_FUNCTIONS_FILE_REPO
         source $ISTIO_FUNCTIONS_FILE
+        rm $ISTIO_FUNCTIONS_FILE
     fi
 
     if [[ "$DOCKER_INSTALL" == true ]]; then
         echo "Install Docker"
         getFunctionsFile $DOCKER_FUNCTIONS_FILE $DOCKER_FUNCTIONS_FILE_REPO
         source $DOCKER_FUNCTIONS_FILE
+        rm $DOCKER_FUNCTIONS_FILE
     fi
 
     if [[ "$WETTY_INSTALL" == true ]]; then
         echo "Install Wetty"
         getFunctionsFile $WETTY_FUNCTIONS_FILE $WETTY_FUNCTIONS_FILE_REPO
         source $WETTY_FUNCTIONS_FILE
+        rm $WETTY_FUNCTIONS_FILE
     fi
 
     if [[ "$SOCKSHOP_INSTALL" == true ]]; then
         echo "Install Sockshop"
         getFunctionsFile $SOCKSHOP_FUNCTIONS_FILE $SOCKSHOP_FUNCTIONS_FILE_REPO
         source $SOCKSHOP_FUNCTIONS_FILE
+        rm $SOCKSHOP_FUNCTIONS_FILE
     fi
 
 }
