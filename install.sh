@@ -30,7 +30,6 @@ PUBLIC_SECTOR_WORKSHOP=${PUBLIC_SECTOR_WORKSHOP:-false}
 # ----  Environment Variables ---- 
 # ==================================================
 #  Untils
-LOGFILE=${LOGFILE:-"/tmp/install.log"}
 UTIL_INSTALL=${UTIL_INSTALL:-false}
 UTIL_FUNCTIONS_FILE_REPO="https://raw.githubusercontent.com/KevLeng/ServerBuildUtils/main/genericUtils.sh"
 UTIL_FUNCTIONS_FILE="genericUtils.sh"
@@ -167,7 +166,7 @@ install(){
 }
 
 if [[ "$PUBLIC_SECTOR_WORKSHOP" == true ]]; then
-
+    echo "Installing for Public Sector Workshop..."
     export MICROK8S_CHANNEL="1.19/stable"
 
     PUBLIC_IP=$(curl -s ifconfig.me)
@@ -182,3 +181,4 @@ if [[ "$PUBLIC_SECTOR_WORKSHOP" == true ]]; then
 fi
 
 install
+echo "install.sh finished."
