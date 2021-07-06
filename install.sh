@@ -135,7 +135,7 @@ install(){
         echo "Install MicroK8S"
         getFunctionsFile $MICROK8S_FUNCTIONS_FILE $MICROK8S_FUNCTIONS_FILE_REPO
         source $MICROK8S_FUNCTIONS_FILE
-        rm $K3S_FUNCTIONS_FILE
+        rm $MICROK8S_FUNCTIONS_FILE
     fi
 
     if [[ "$HELM_INSTALL" == true ]]; then
