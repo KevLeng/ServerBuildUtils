@@ -175,7 +175,7 @@ if [[ "$PUBLIC_SECTOR_WORKSHOP" == true ]]; then
     export DOMAIN="${PUBLIC_IP_AS_DOM}.nip.io"
 
     UTIL_INSTALL=true
-    K3S_INSTALL=true
+    MICROK8S_INSTALL=true
     WETTY_INSTALL=true
     SOCKSHOP_INSTALL=true
 
