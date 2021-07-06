@@ -16,3 +16,8 @@ export INGRESSCLASS=nginx
 ./deploy-ingress.sh
 
 echo "Sockshop ingress deployed."
+
+
+echo "-----------------------------------------------------------------------"
+echo "Done installation of sockshop"
+echo "-----------------------------------------------------------------------"
