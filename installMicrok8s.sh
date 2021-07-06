@@ -6,7 +6,6 @@ echo "***********************************************************************"
 
 export MICROK8S_CHANNEL=${MICROK8S_CHANNEL:-"1.19/stable"}
 export USER=${USER:-"ubuntu"}
-export CLUSTER_SERVER=$(microk8s config | grep "server:" | sed 's/^.*server: //')
 
 # Wrapper for runnig commands for the real owner and not as root
 # thanks to keptn-in-a-box for this script which i have copied most of the commands from!
@@ -50,6 +49,7 @@ echo "Enable MicroK8S Ingress"
 microk8s.enable ingress
 
 # fix cluster ip address
+export CLUSTER_SERVER=$(microk8s config | grep "server:" | sed 's/^.*server: //')
 echo "CLUSTER_SERVER:$CLUSTER_SERVER"
 kubectl config set-cluster microk8s-cluster --insecure-skip-tls-verify=true --server="$CLUSTER_SERVER"
 kubectl config view
