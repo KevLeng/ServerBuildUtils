@@ -198,7 +198,8 @@ if [[ "$DST_WORKSHOP" == true ]]; then
 
     UTIL_INSTALL=true
     MICROK8S_INSTALL=true
-    MICROK8S_HELM_INSTALL=true
+    MICROK8S_HELM_INSTALL=false
+    HELM_INSTALL=true
     WETTY_INSTALL=true
     SOCKSHOP_INSTALL=true
 
