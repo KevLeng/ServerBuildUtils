@@ -43,6 +43,7 @@ K3S_FUNCTIONS_FILE="installK3S.sh"
 MICROK8S_INSTALL=${MICROK8S_INSTALL:-false}
 MICROK8S_FUNCTIONS_FILE_REPO="https://raw.githubusercontent.com/KevLeng/ServerBuildUtils/main/installMicrok8s.sh"
 MICROK8S_FUNCTIONS_FILE="installMicrok8s.sh"
+MICROK8S_HELM_INSTALL=${MICROK8S_HELM_INSTALL:-false}
 
 #  Helm
 HELM_INSTALL=${HELM_INSTALL:-false}
@@ -183,6 +184,21 @@ if [[ "$CLOUD_NATIVE_OBERV" == true ]]; then
 
     UTIL_INSTALL=true
     MICROK8S_INSTALL=true
+    WETTY_INSTALL=true
+    SOCKSHOP_INSTALL=true
+
+fi
+if [[ "$DEF_WORKSHOP" == true ]]; then
+    echo "Installing for Public Sector Workshop..."
+    export MICROK8S_CHANNEL="1.19/stable"
+
+    PUBLIC_IP=$(curl -s ifconfig.me)
+    PUBLIC_IP_AS_DOM=$(echo $PUBLIC_IP | sed 's~\.~-~g')
+    export DOMAIN="${PUBLIC_IP_AS_DOM}.nip.io"
+
+    UTIL_INSTALL=true
+    MICROK8S_INSTALL=true
+    MICROK8S_HELM_INSTALL=true
     WETTY_INSTALL=true
     SOCKSHOP_INSTALL=true
 

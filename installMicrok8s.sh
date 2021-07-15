@@ -48,6 +48,23 @@ microk8s.enable storage
 echo "Enable MicroK8S Ingress"
 microk8s.enable ingress
 
+
+
+if [[ "$MICROK8S_HELM_INSTALL" == true ]]; then
+    echo "Installing HELM 3 & Client via Microk8s addon"
+    microk8s.enable helm3
+    echo "Adding alias for helm client"
+    snap alias microk8s.helm3 helm
+    echo "Adding Default repo for Helm"
+    helm repo add stable https://charts.helm.sh/stable
+    echo "Adding Jenkins repo for Helm"
+    helm repo add jenkins https://charts.jenkins.io
+    echo "Adding GiteaCharts for Helm"
+    helm repo add gitea-charts https://dl.gitea.io/charts/
+    echo "Updating Helm Repository"
+    helm repo update
+fi
+
 # fix cluster ip address
 export CLUSTER_SERVER=$(microk8s config | grep "server:" | sed 's/^.*server: //')
 echo "CLUSTER_SERVER:$CLUSTER_SERVER"
