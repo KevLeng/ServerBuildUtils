@@ -188,8 +188,8 @@ if [[ "$CLOUD_NATIVE_OBERV" == true ]]; then
     SOCKSHOP_INSTALL=true
 
 fi
-if [[ "$DEF_WORKSHOP" == true ]]; then
-    echo "Installing for Public Sector Workshop..."
+if [[ "$DST_WORKSHOP" == true ]]; then
+    echo "Installing for DST Workshop..."
     export MICROK8S_CHANNEL="1.19/stable"
 
     PUBLIC_IP=$(curl -s ifconfig.me)
