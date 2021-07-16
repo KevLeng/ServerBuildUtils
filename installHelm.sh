@@ -19,7 +19,7 @@ echo "Installing Helm Version: $HELM_VERSION"
 #rm helm-${HELM_VERSION}-linux-amd64.tar.gz
 #rm -r linux-amd64
 
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/${HELM_VERSION}/scripts/get-helm-3
 chmod 700 get_helm.sh
 ./get_helm.sh
 
