@@ -69,7 +69,7 @@ WETTY_FUNCTIONS_FILE="installWetty.sh"
 SOCKSHOP_INSTALL=${SOCKSHOP_INSTALL:-false}
 SOCKSHOP_FUNCTIONS_FILE_REPO="https://raw.githubusercontent.com/KevLeng/ServerBuildUtils/main/installSockshop.sh"
 SOCKSHOP_FUNCTIONS_FILE="installSockshop.sh"
-
+SOCKSHOP_JENKINS_INSTALL=${SOCKSHOP_JENKINS_INSTALL:-false}
 
 
 ## ----  Write all output to the logfile ----
@@ -201,6 +201,7 @@ if [[ "$DST_WORKSHOP" == true ]]; then
     MICROK8S_HELM_INSTALL=false
     HELM_INSTALL=true
     WETTY_INSTALL=true
+    SOCKSHOP_JENKINS_INSTALL=true
     SOCKSHOP_INSTALL=true
 
 fi
