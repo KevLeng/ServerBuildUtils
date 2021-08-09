@@ -188,6 +188,20 @@ if [[ "$CLOUD_NATIVE_OBERV" == true ]]; then
     SOCKSHOP_INSTALL=true
 
 fi
+if [[ "$K8S_WORKSHOP" == true ]]; then
+    echo "Installing for Kubernetes Workshop..."
+    export MICROK8S_CHANNEL="1.19/stable"
+
+    PUBLIC_IP=$(curl -s ifconfig.me)
+    PUBLIC_IP_AS_DOM=$(echo $PUBLIC_IP | sed 's~\.~-~g')
+    export DOMAIN="${PUBLIC_IP_AS_DOM}.nip.io"
+
+    UTIL_INSTALL=true
+    MICROK8S_INSTALL=true
+    WETTY_INSTALL=true
+    SOCKSHOP_INSTALL=true
+
+fi
 if [[ "$DST_WORKSHOP" == true ]]; then
     echo "Installing for DST Workshop..."
     export MICROK8S_CHANNEL="1.19/stable"
