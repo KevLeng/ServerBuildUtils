@@ -25,6 +25,9 @@ APITOKEN=$APITOKEN
 # ----  Workshop Variables ---- 
 # ==================================================
 CLOUD_NATIVE_OBERV=${CLOUD_NATIVE_OBERV:-false}
+K8S_WORKSHOP=${K8S_WORKSHOP:-false}
+DST_WORKSHOP=${DST_WORKSHOP:-false}
+
 
 # ==================================================
 # ----  Environment Variables ---- 
