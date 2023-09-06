@@ -14,8 +14,11 @@ alias bashas="sudo -H -u ${USER} bash -c"
 # Expand aliases for non-interactive shell
 shopt -s expand_aliases
 
-echo "Installing microk8s version: $MICROK8S_CHANNEL"
-sudo snap install microk8s --classic --channel=$MICROK8S_CHANNEL
+#echo "Installing microk8s version: $MICROK8S_CHANNEL"
+#sudo snap install microk8s --classic --channel=$MICROK8S_CHANNEL
+
+echo "Installing latest microk8s version"
+sudo snap install microk8s --classic
 
 echo "allowing the execution of priviledge pods"
 bash -c "echo \"--allow-privileged=true\" >> /var/snap/microk8s/current/args/kube-apiserver"
@@ -45,10 +48,11 @@ echo "Enable MicroK8S DNS"
 microk8s.enable dns
 echo "Enable MicroK8S Storage"
 microk8s.enable storage
-echo "Enable MicroK8S Ingress"
-microk8s.enable ingress
 
-
+## Enable ingress if you want to expose the application and use it for RUM or other workshops.
+## Ensure it is disabled if using together with Visual Code Server due to nginx onflict on port 80
+#echo "Enable MicroK8S Ingress"
+#microk8s.enable ingress
 
 if [[ "$MICROK8S_HELM_INSTALL" == true ]]; then
     echo "Installing HELM 3 & Client via Microk8s addon"
