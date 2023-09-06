@@ -45,8 +45,10 @@ echo "Enable MicroK8S DNS"
 microk8s.enable dns
 echo "Enable MicroK8S Storage"
 microk8s.enable storage
-echo "Enable MicroK8S Ingress"
-microk8s.enable ingress
+
+# disable ingress for now
+# echo "Enable MicroK8S Ingress"
+# microk8s.enable ingress
 
 
 
