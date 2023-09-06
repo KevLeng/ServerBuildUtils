@@ -4,7 +4,7 @@ echo "***********************************************************************"
 echo "Started installMicrok8s.sh"
 echo "***********************************************************************"
 
-export MICROK8S_CHANNEL=${MICROK8S_CHANNEL:-"1.19/stable"}
+export MICROK8S_CHANNEL=${MICROK8S_CHANNEL:-"1.27/stable"}
 export USER=${USER:-"ubuntu"}
 
 # Wrapper for runnig commands for the real owner and not as root
