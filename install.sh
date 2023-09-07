@@ -179,7 +179,7 @@ install(){
 
 if [[ "$CLOUD_NATIVE_OBERV" == true ]]; then
     echo "Installing for Public Sector Workshop..."
-    export MICROK8S_CHANNEL="1.19/stable"
+    export MICROK8S_CHANNEL="1.27/stable"
 
     PUBLIC_IP=$(curl -s ifconfig.me)
     PUBLIC_IP_AS_DOM=$(echo $PUBLIC_IP | sed 's~\.~-~g')
@@ -193,7 +193,7 @@ if [[ "$CLOUD_NATIVE_OBERV" == true ]]; then
 fi
 if [[ "$K8S_WORKSHOP" == true ]]; then
     echo "Installing for Kubernetes Workshop..."
-    export MICROK8S_CHANNEL="1.19/stable"
+    export MICROK8S_CHANNEL="1.27/stable"
 
     PUBLIC_IP=$(curl -s ifconfig.me)
     PUBLIC_IP_AS_DOM=$(echo $PUBLIC_IP | sed 's~\.~-~g')
